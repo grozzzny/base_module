@@ -6,7 +6,7 @@ use Yii;
 use yii\data\BaseDataProvider;
 use yii\db\ActiveQuery;
 
-class Company extends BaseModel
+class CompanyTest extends BaseModel
 {
     const PRIMARY_MODEL = true;
 
