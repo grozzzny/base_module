@@ -1,6 +1,6 @@
 {
-    "name": "grozzzny/base_module",
-    "description": "Base module for EasyiiCMS",
+    "name": "grozzzny/companies",
+    "description": "Companies for EasyiiCMS",
     "keywords": ["yii", "easyiiCMS", "CMS", "module"],
     "type": "yii2-extension",
     "minimum-stability": "dev",
@@ -14,13 +14,11 @@
     ],
     "require": {
         "php": ">=5.6.0",
-        "grozzzny/widgets": "dev-master",
-        "yiisoft/yii2": "*",
-        "kartik-v/yii2-widget-select2": "@dev"
+        "grozzzny/base_module": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "grozzzny\\base_module\\": ""
+            "grozzzny\\companies\\": ""
         }
     }
 }
