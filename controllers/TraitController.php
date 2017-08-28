@@ -1,8 +1,6 @@
 <?php
 namespace grozzzny\base_module\controllers;
 
-use grozzzny\base_module\BaseModel;
-use Yii;
 use yii\easyii\helpers\Image;
 use yii\easyii\helpers\Upload;
 use yii\web\UploadedFile;
@@ -14,7 +12,7 @@ trait TraitController
      * Сохранение изображений и файлов. Отличе в методе сохранения
      * @param $current_model
      */
-    public function saveFiles(BaseModel &$current_model)
+    public function saveFiles(&$current_model)
     {
         foreach ($current_model->getAttributes() as $attribute => $value){
             if($current_model->hasValidator('image', $attribute)) {
