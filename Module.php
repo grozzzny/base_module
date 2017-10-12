@@ -2,6 +2,7 @@
 namespace grozzzny\base_module;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 class Module extends \yii\easyii\components\Module
 {
@@ -24,11 +25,16 @@ class Module extends \yii\easyii\components\Module
     {
         $models = [];
 
+        $settings = Yii::$app->getModule('admin')->activeModules[Yii::$app->controller->module->id]->settings;
+
         foreach (glob($this->basePath . "/models/*.php") as $file){
             $file_name = basename($file, '.php');
+
             if($file_name == 'Base') continue;
 
-            $class_name = preg_replace('/[^\\\]+$/', '', $this->className()) . 'models\\' . $file_name;
+            $alternative_class_name = ArrayHelper::getValue($settings, 'model'.$file_name, '');
+
+            $class_name = !empty($alternative_class_name) ? $alternative_class_name : preg_replace('/[^\\\]+$/', '', $this->className()) . 'models\\' . $file_name;
 
             if(!class_exists($class_name)) continue;
 
