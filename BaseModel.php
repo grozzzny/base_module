@@ -6,7 +6,7 @@ use yii\easyii2\behaviors\CacheFlush;
 use Yii;
 use yii\easyii2\behaviors\SortableModel;
 
-class BaseModel extends \yii\easyii2\components\ActiveRecord
+class BaseModel extends \yii\easyii2\components\Module
 {
     use TraitModel;
 
