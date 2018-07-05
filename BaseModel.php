@@ -2,11 +2,11 @@
 namespace grozzzny\base_module;
 
 use yii\db\ActiveQuery;
-use yii\easyii\behaviors\CacheFlush;
+use yii\easyii2\behaviors\CacheFlush;
 use Yii;
-use yii\easyii\behaviors\SortableModel;
+use yii\easyii2\behaviors\SortableModel;
 
-class BaseModel extends \yii\easyii\components\ActiveRecord
+class BaseModel extends \yii\easyii2\components\ActiveRecord
 {
     use TraitModel;
 

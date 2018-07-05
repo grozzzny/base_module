@@ -4,7 +4,7 @@ namespace grozzzny\base_module;
 use Yii;
 use yii\helpers\ArrayHelper;
 
-class Module extends \yii\easyii\components\Module
+class Module extends \yii\easyii2\components\Module
 {
     public $controllerNamespace = 'grozzzny\base_module\controllers';
 
