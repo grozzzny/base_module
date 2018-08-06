@@ -49,10 +49,10 @@ class Module extends \yii\easyii2\components\Module
         return $models;
     }
 
-//    public function getModel($slug)
-//    {
-//        $models = $this->getModels();
-//        return empty($slug) ? current($models) : $models[$slug];
-//    }
+    public function getModel($slug)
+    {
+        $models = $this->getModels();
+        return empty($slug) ? current($models) : $models[$slug];
+    }
 
 }
